@@ -1,11 +1,9 @@
-from flask import Flask, session
+from flask import Flask, session, render_template
 
 app = Flask(__name__)
-app.secret_key = "abracadabra"
 
 
 @app.route("/")
 def index():
-    print(session.keys())
-    return "<h1>HELLO WORLD</h1>"
+    return render_template("index.html", title="Hello", data="Первая страница сайта")
 
