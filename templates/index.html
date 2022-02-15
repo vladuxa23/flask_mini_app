@@ -6,6 +6,14 @@
 
 <div class="container">
     {{ data }}
+
+    <form action="handler" method="post">
+        <label for="name">Введите ваше имя</label>
+        <input type="text" class="form-control" name="name" id="name" value="" required>
+        <br>
+
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Подтвердить</button>
+    </form>
 </div>
 
 {% endblock %}
